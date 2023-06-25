@@ -1,8 +1,8 @@
 import { lazy, Suspense, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-// import { useDispatch } from 'react-redux';
+
 import { Routes, Route } from 'react-router-dom';
-// import { Navigate } from 'react-router-dom';
+
 import AppBar from './components/Appbar';
 import Container from './components/Container';
 import { ToastContainer } from 'react-toastify';
@@ -22,7 +22,7 @@ const RegisterView = lazy(() => import('./views/RegisterView'));
 export default function App() {
   const dispatch = useDispatch();
   const error = useSelector(authSelectors.getError);
-  // console.log(error);
+  
 
   useEffect(() => {
     dispatch(authOperations.fetchCurrentUser());
@@ -47,7 +47,7 @@ export default function App() {
                 </PublicRoute>
               }
             ></Route>
-            {/* <Route path="contacts" element={<ContactsView />}></Route> */}
+            {}
             <Route
               path="contacts"
               element={
